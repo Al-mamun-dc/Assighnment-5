@@ -2,83 +2,42 @@ import bannerStack from "../assets/banner-stack.png";
 
 const Banner = () => {
   return (
-    <section
-      id="home"
-      className="border-x-2 border-blue-500 bg-white"
-    >
-      {/* Top Stripe */}
-      <div
-        className="h-2 w-full"
-        style={{
-          background:
-            "repeating-linear-gradient(135deg, #dbeafe 0px, #dbeafe 2px, transparent 2px, transparent 7px)",
-        }}
-      />
+    <section id="home"className="border-x-2 border-blue-500 bg-white px-6 py-10">
+      <div className="container mx-auto">
+        <div className="flex flex-col items-center justify-between gap-10 md:flex-row">
 
-      <div className="container mx-auto px-6 py-8 md:px-10 md:py-10">
-        <div className="flex min-h-[250px] items-center justify-between gap-8">
+          
+          <div className="flex w-full flex-col md:w-1/2">
 
-          {/* LEFT SIDE */}
-          <div className="w-1/2">
-
-            <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-gray-900 md:text-5xl">
-              Build Your Ideal
-              <br />
-
-              <span
-                style={{
-                  background:
-                    "linear-gradient(to right, #ff4b2b, #c026d3)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
+            <h1 className="text-4xl font-bold leading-tight text-gray-800 md:text-5xl">
+              Build Your Ideal{" "}
+              <span className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
                 Development Stack
               </span>
             </h1>
 
-            <p className="mt-4 max-w-[480px] text-sm leading-5 text-gray-500">
+            <p className="mt-5 max-w-xl text-sm leading-6 text-gray-500">
               Explore frontend, backend, database, and tooling options,
               compare them side by side, and put together the stack that fits
               your next project.
             </p>
 
-            <div className="mt-7 flex items-center gap-2">
+            <div className="mt-7 flex items-center gap-4">
 
-              {/* Explore Technologies */}
-              <a
-                href="#technologies"
-                style={{
-                  background:
-                    "linear-gradient(to right, #ff6a00, #f6339a)",
-                }}
-                className="rounded-md px-3 py-2 text-[10px] font-medium text-white"
-              >
+            
+              <a href="" className="rounded-lg bg-linear-to-r from-orange-500 via-pink-500 to-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105" >
                 Explore Technologies
               </a>
 
-              {/* Learn More */}
-              <a
-                href="#about"
-                className="rounded-md border border-gray-200 bg-white px-7 py-2 text-[10px] text-gray-600"
-              >
+              <a href="" className="rounded-lg border border-gray-300 px-5 py-3 text-sm font-medium text-gray-600 transition-all duration-300 hover:border-violet-500 hover:text-violet-600" >
                 Learn More
               </a>
 
             </div>
           </div>
 
-
-          {/* RIGHT SIDE */}
-          <div className="flex w-1/2 items-center justify-end">
-
-            <img
-              src={bannerStack}
-              alt="Development Stack"
-              className="w-64 md:w-80"
-            />
-
+          <div className="flex w-full items-center justify-center md:w-1/2 md:justify-end">
+            <img src={bannerStack} alt="Development Stack" className="w-64 md:w-80" />
           </div>
 
         </div>

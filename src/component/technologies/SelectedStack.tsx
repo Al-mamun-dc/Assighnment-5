@@ -42,11 +42,7 @@ const SelectedStack = ({
 
                 <div className="flex items-center gap-2">
 
-                  <img
-                    src={item.icon}
-                    alt={item.name}
-                    className="h-5 w-5"
-                  />
+                  <img src={item.icon} alt={item.name}className="h-5 w-5" />
 
                   <div>
                     <p className="text-sm">
@@ -60,10 +56,7 @@ const SelectedStack = ({
 
                 </div>
 
-                <button
-                  onClick={() => handleRemoveStack(item.id)}
-                  className="text-gray-400 hover:text-red-500"
-                >
+                <button onClick={() => handleRemoveStack(item.id)}className="text-gray-400 hover:text-red-500">
                   ✕
                 </button>
 
@@ -72,10 +65,7 @@ const SelectedStack = ({
 
           </div>
 
-          <button
-            onClick={handleRemoveAll}
-            className="mt-5 w-full rounded border border-red-300 py-2 text-sm text-red-500"
-          >
+          <button onClick={handleRemoveAll} className="mt-5 w-full rounded border border-red-300 py-2 text-sm text-red-500" >
             Remove All
           </button>
         </>

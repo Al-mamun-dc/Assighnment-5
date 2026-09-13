@@ -57,11 +57,7 @@ const Technology = ({
 
             </div>
 
-            <button
-              onClick={() => handleAddStack(technology)}
-              disabled={isAdded}
-              className="mt-4 w-full rounded bg-gray-900 py-2 text-white"
-            >
+            <button onClick={() => handleAddStack(technology)} disabled={isAdded} className="mt-4 w-full rounded bg-gray-900 py-2 text-white" >
               {isAdded
                 ? "✓ Added to Stack"
                 : "Add to Stack"}
