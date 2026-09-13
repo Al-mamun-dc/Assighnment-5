@@ -9,14 +9,14 @@ interface TechnologyProps {
 const Technology = ({
   technologies,
   stack,
-  handleAddStack
+  handleAddStack,
 }: TechnologyProps) => {
   return (
     <div className="grid flex-1 grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 
       {technologies.map((technology) => {
 
-        const isSelected = stack.some(
+        const isAdded = stack.some(
           (item) => item.id === technology.id
         );
 
@@ -48,17 +48,23 @@ const Technology = ({
             </p>
 
             <div className="mt-4 flex justify-between text-xs text-gray-500">
+
               <span>{technology.category}</span>
+
               <span>{technology.difficulty}</span>
+
               <span>★ {technology.rating}</span>
+
             </div>
 
             <button
               onClick={() => handleAddStack(technology)}
-              disabled={isSelected}
-              className="mt-4 w-full rounded bg-gray-900 py-2 text-white disabled:cursor-not-allowed disabled:opacity-50"
+              disabled={isAdded}
+              className="mt-4 w-full rounded bg-gray-900 py-2 text-white"
             >
-              {isSelected ? "Already Selected" : "Add to Stack"}
+              {isAdded
+                ? "✓ Added to Stack"
+                : "Add to Stack"}
             </button>
 
           </div>
